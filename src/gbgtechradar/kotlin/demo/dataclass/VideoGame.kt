@@ -6,3 +6,7 @@ package gbgtechradar.kotlin.demo.dataclass
 data class VideoGame(val name: String, val publisher: String, var reviewScore: Int)
 
 val game: VideoGame = VideoGame("Gears of War", "Epic Games", 8)
+
+fun main(args: Array<String>) {
+    println(game)
+}

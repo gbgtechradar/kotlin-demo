@@ -27,7 +27,7 @@ fun main(args : Array<String>) {
     println("After constructor")
     println( hello.myLazyString)
 
-    // hello.test()       will throw kotlin.UninitializedPropertyAccessException
+    // hello.test()   //    will throw kotlin.UninitializedPropertyAccessException
     hello.setup()
     hello.test()
 }

@@ -8,7 +8,7 @@ class NullSafety {
 
     var user : User? = null
 
-    fun examples() {
+    fun examples():String? {
 
         var a: String = "abc"
         //a = null     compilation error
@@ -19,7 +19,7 @@ class NullSafety {
 
         val ns = NullSafety()
 
-        ns.user?.name
+        return ns.user?.name
     }
 
     fun alwaysTrue(b:String?) : Boolean {
@@ -31,16 +31,19 @@ class NullSafety {
     }
 
     fun willThrowNPE() {
-        var b: String? = null
-        val l = b!!.length
+        val b: String? = null
+        //val l1 = b.length   // compilation error
+        val l2 = b?.length    // l2 = null
+        val l3 = b!!.length   // throws NPE
 
     }
 
     fun safeCast() {
-
-        var a: Any = "abc"
+        val a: Any = "safeCast"
+        val aString: String? = a as? String
+        println( "safeCast to String?: $aString")
         val aInt: Int? = a as? Int
-        // aInt is null
+        println( "safeCast to Int?: $aInt")    // aInt is null
     }
 }
 
@@ -48,9 +51,13 @@ fun main(args :Array<String>) {
 
     val ns = NullSafety()
 
-    println( ns.user?.name)
+    println("examples(): ${ns.examples()}")
+
+    println( "ns.user?.name => ${ns.user?.name}")
 
     println( ns.alwaysTrue("hello"))
     println(ns.alwaysTrue(null))
+
+    ns.safeCast()
 
 }
