@@ -4,7 +4,7 @@ The repository contains code examples of different features in the programming l
 Kotlin. The code is referenced from the talk I gave at Gothenburg Tech Radar Meetup
 April 26, 2017.
 
-The presentation can be found here https://docs.google.com/presentation/d/.....
+The presentation can be found here [Kotlin - Modern language by JetBrains](https://docs.google.com/presentation/d/1re0JT3IONukLwvDlzXTjs222LNX5jeKy8BsnX3sZjSk)
 
 The features that are shown here are
 
