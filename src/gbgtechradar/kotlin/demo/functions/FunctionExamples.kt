@@ -3,8 +3,6 @@ package gbgtechradar.kotlin.demo.functions
 import java.util.concurrent.locks.Lock
 import java.util.concurrent.locks.ReentrantLock
 
-
-
 fun double(x: Int): Int = x * 2
 
 fun <T> asList(vararg ts: T): List<T> {

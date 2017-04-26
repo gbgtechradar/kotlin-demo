@@ -10,7 +10,9 @@ class DemoCollections {
         val doubledList = immutableStringList + immutableStringList
         println("doubledList: " + doubledList)
 
-        val newStringList = immutableStringList.mapIndexed { index, s -> if (isEven(index)) s.toUpperCase() else s }
+        val newStringList = immutableStringList.mapIndexed { index, s ->
+            if (isEven(index)) s.toUpperCase() else s
+        }
         println("mutableStringList: " + newStringList.joinToString { it })
 
 
@@ -19,7 +21,9 @@ class DemoCollections {
         mutableStringList += mutableStringList
         println("concatenated mutableStringList: " + mutableStringList)
 
-        val newMutableList = mutableStringList.mapIndexed { index, s -> if (isEven(index)) s.toUpperCase() else s }
+        val newMutableList = mutableStringList.mapIndexed { index, s ->
+            if (isEven(index)) s.toUpperCase() else s
+        }
         println("mutableStringList: " + newMutableList.joinToString { it })
     }
 

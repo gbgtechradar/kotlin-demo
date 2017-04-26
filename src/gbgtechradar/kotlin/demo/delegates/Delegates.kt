@@ -20,9 +20,13 @@ class MutableUser(val map: MutableMap<String, Any?>) {
 }
 
 fun main(args: Array<String>) {
+
+    println( "Before User creation")
     val user = User()
     user.name = "first"
     user.name = "second"
+    println( "After User creation")
+
 
     val userFromMap = UserFromMap(mapOf(
             "name" to "John Doe",
